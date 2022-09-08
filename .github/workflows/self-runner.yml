@@ -1,4 +1,4 @@
-name: Feature Branch
+name: Self Hosted Runner Branch
 
 on:
   push:
