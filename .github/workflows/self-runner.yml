@@ -3,7 +3,7 @@ name: Self Hosted Runner Newmaster Branch
 on:
   push:
     branches-ignore:
-      - 'newmaster
+      - 'newmaster'
       - 'release*'
 
 jobs:
