@@ -13,11 +13,6 @@
   <description>The most basic of Java programs.</description>
   <url>https://www.coveros.com/</url>
   <inceptionYear>2018</inceptionYear>
-
-  <properties>
-  <sonar.organization>sridhar-philips</sonar.organization>
-  <sonar.host.url>https://sonarcloud.io</sonar.host.url>
- </properties>
   
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -25,6 +20,8 @@
     <jdk.version>1.8</jdk.version>
 
     <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
+    <sonar.organization>sridhar-philips</sonar.organization>
+    <sonar.host.url>https://sonarcloud.io</sonar.host.url>
   </properties>
 
   <build>
