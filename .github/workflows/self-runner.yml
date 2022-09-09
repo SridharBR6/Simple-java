@@ -10,7 +10,7 @@ jobs:
 
   test:
     name: Unit Test
-    runs-on: Ubuntu-latest
+    runs-on: [self-hosted, Linux, x64]
 
     steps:
       - uses: actions/checkout@v1
