@@ -2,9 +2,10 @@ name: Self Hosted Runner Newmaster Branch
 
 on:
   push:
-    branches-ignore:
-      - 'newmaster'
-      - 'release*'
+    branches:
+      - newmaster
+  pull_request:
+    types: [opened, synchronize, reopened]
 
 jobs:
 
