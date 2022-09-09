@@ -1,16 +1,16 @@
-name: Feature Branch
+name: Self Runner On Staging Branch
 
 on:
   push:
     branches-ignore:
-      - 'master'
+      - 'staging'
       - 'release*'
 
 jobs:
 
   test:
     name: Unit Test
-    runs-on: self-hosted
+    runs-on: [self-hosted, linux, x64]
 
     steps:
       - uses: actions/checkout@v1
