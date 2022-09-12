@@ -10,7 +10,7 @@ on:
 jobs:
   Build-FortifyScan:
 
-    runs-on: [self-hosted, linux, X64, research]
+    runs-on: [self-hosted, linux, X64, philips]
     container:
       image: maven:3.8.4-jdk-8
       
