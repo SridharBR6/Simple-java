@@ -1,4 +1,6 @@
-name: Self Runner On Staging Branch
+
+name: Self Hosted Runner Branch
+
 
 on:
   push:
@@ -10,7 +12,8 @@ jobs:
 
   test:
     name: Unit Test
-    runs-on: [self-hosted, linux, x64]
+
+    runs-on: [self-hosted, Linux, x64]
 
     steps:
       - uses: actions/checkout@v1
