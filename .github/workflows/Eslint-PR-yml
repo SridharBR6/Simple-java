@@ -1,0 +1,28 @@
+name: Eslint-PR
+on:
+  pull_request:
+    branches:
+      - eslint
+
+jobs:
+  Fortify-PR:
+    runs-on: ubuntu-latest
+    container:
+      image: maven:3.8.4-jdk-8
+    name: Triggering Eslint PR analysis
+    steps:
+      - name: fetching code
+        uses: actions/checkout@v3
+        with:
+           fetch-depth: 0
+      - name: Java-Build
+        run: mvn -B clean verify
+
+      - name: Fortify scan
+        uses: philips-internal/fortify-pullrequest-gate-action@v2.4.0
+        with:
+            ci_cd_github_token: ${{ secrets.GH_SUSANTH_TOKEN }}
+            basesha: ${{ github.event.pull_request.base.sha }}
+            headsha: ${{ github.event.pull_request.head.sha }}
+            language: java
+            exclude: "./**/test/*.java"
