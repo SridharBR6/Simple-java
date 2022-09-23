@@ -1,4 +1,4 @@
-name: Unit Test Branch
+name: Unit Branch
 
 on:
   push:
@@ -10,7 +10,7 @@ jobs:
 
   test:
     name: Unit Test
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
 
     steps:
       - uses: actions/checkout@v1
